@@ -1,5 +1,8 @@
 # juman-wrapper
 形態素解析器[JUMAN](http://nlp.ist.i.kyoto-u.ac.jp/index.php?JUMAN)のRubyラッパー
+
+## 環境設定
+[JUMAN](http://nlp.ist.i.kyoto-u.ac.jp/index.php?JUMAN)のインストールが必要
 ## 使い方
 
 ```ruby
