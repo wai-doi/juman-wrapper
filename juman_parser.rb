@@ -1,10 +1,15 @@
 require 'open3'
 module JumanParser
   class Parser
+    attr_reader :lines
     def initialize(text)
       @text = text
+
+      # jumanを実行
       out, err, status = run_juman
-      puts out
+
+      # 解析結果一行を要素にもつ配列
+      @lines = out.split("\n")[0..-2]
     end
 
     private
@@ -18,5 +23,6 @@ end
 
 if $0 == __FILE__
   text = "東京は日本の首都です。"
-  JumanParser::Parser.new(text)
+  juman = JumanParser::Parser.new(text)
+  pp juman.lines
 end
