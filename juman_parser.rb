@@ -1,5 +1,5 @@
 require 'open3'
-module JumanParser
+module JumanWrapper
   class Parser
     attr_reader :lines, :morphemes, :surfaces
     def initialize(text)
@@ -43,7 +43,7 @@ end
 
 if $0 == __FILE__
   text = "私はコンビニでお弁当を買った。"
-  juman = JumanParser::Parser.new(text)
+  juman = JumanWrapper::Parser.new(text)
 
   # 表層形の配列
   p juman.surfaces

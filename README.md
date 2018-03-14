@@ -1,10 +1,10 @@
-# juman-parser
-形態素解析器[JUMAN](http://nlp.ist.i.kyoto-u.ac.jp/index.php?JUMAN)のparser
+# juman-wrapper
+形態素解析器[JUMAN](http://nlp.ist.i.kyoto-u.ac.jp/index.php?JUMAN)のRubyラッパー
 ## 使い方
 
 ```ruby
 text = "私はコンビニでお弁当を買った。"
-juman = JumanParser::Parser.new(text)
+juman = JumanWrapper::Parser.new(text)
 
 # 表層形の配列
 p juman.surfaces
